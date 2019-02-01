@@ -85,6 +85,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Actions
     
+    
     @IBAction func loginButtonAction() {
         
         guard let loginText = self.loginTextField?.text else {
@@ -99,10 +100,23 @@ class LoginViewController: UIViewController {
         
         if self.demoLogin == loginText && self.demoPass == passText {
             print("Success")
+            self.performSegue(withIdentifier: "openApp", sender: nil)
         } else {
             print("loginText or passText are invalid")
-        }
+            self.showErrorAlert()        }
     }
+    
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: "Error", message: "Wrong login or pass", preferredStyle: .alert)
+        
+        let alertCancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in
+            print("alertCancelAction")
+        }
+        alertController.addAction(alertCancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func closeKeyboardAction() {
         print("closeKeyboardAction")
