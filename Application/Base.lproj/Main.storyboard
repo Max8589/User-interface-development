@@ -50,9 +50,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="WuH-PV-7qn">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="dMi-8B-gMK" id="tPl-jw-QsY"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupsTableViewCell" id="5r0-cy-c5l" customClass="GroupsTableViewCell" customModule="Application" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5r0-cy-c5l" id="rPv-89-ssh">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -223,45 +231,57 @@
         <!--Friend-->
         <scene sceneID="rPs-zi-rXx">
             <objects>
-                <collectionViewController storyboardIdentifier="FriendCollectionViewController" id="DnV-a5-Upk" customClass="FriendCollectionViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6rZ-j5-AwM">
+                <collectionViewController storyboardIdentifier="FriendCollectionViewController" title="Friend" id="DnV-a5-Upk" customClass="FriendCollectionViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FriendCollectionView" dataMode="prototypes" id="6rZ-j5-AwM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RCw-Ve-KnS">
-                            <size key="itemSize" width="237" height="383"/>
+                            <size key="itemSize" width="250" height="280"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendCollectionViewCell" id="uqr-UC-pjY" customClass="FriendCollectionViewCell" customModule="Application" customModuleProvider="target">
-                                <rect key="frame" x="88.666666666666671" y="0.0" width="237" height="383"/>
+                                <rect key="frame" x="82" y="0.0" width="250" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="237" height="383"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FriendImage" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-wb-tGg">
-                                            <rect key="frame" x="0.0" y="0.0" width="237" height="353"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FriendsName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojp-XT-9VG">
-                                            <rect key="frame" x="8" y="354" width="221" height="21"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="LikeView" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-qQ-cnf" customClass="LikeView" customModule="Application" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="250" width="60" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ShadowFriendView" translatesAutoresizingMaskIntoConstraints="NO" id="K0q-PJ-ILL" customClass="ShadowFriendView" customModule="Application" customModuleProvider="target">
+                                            <rect key="frame" x="30" y="30" width="190" height="190"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="FriendView" translatesAutoresizingMaskIntoConstraints="NO" id="3uC-w3-WsS" customClass="FriendView" customModule="Application" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="25" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="FriendImageView" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-wb-tGg" colorLabel="IBBuiltInLabel-Red">
+                                                    <rect key="frame" x="1" y="1" width="198" height="198"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FriendsName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojp-XT-9VG">
+                                            <rect key="frame" x="60" y="250" width="190" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Ojp-XT-9VG" secondAttribute="trailing" id="PhO-zq-mJG"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yvn-wb-tGg" secondAttribute="bottom" constant="30" id="Tng-VQ-PTW"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yvn-wb-tGg" secondAttribute="trailing" id="Ywa-fF-P1m"/>
-                                    <constraint firstItem="Yvn-wb-tGg" firstAttribute="top" secondItem="uqr-UC-pjY" secondAttribute="top" id="ctF-1j-eS2"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Ojp-XT-9VG" secondAttribute="bottom" id="hmL-Lj-IQh"/>
-                                    <constraint firstItem="Ojp-XT-9VG" firstAttribute="leading" secondItem="uqr-UC-pjY" secondAttribute="leadingMargin" id="lhr-FM-QVK"/>
-                                    <constraint firstItem="Yvn-wb-tGg" firstAttribute="leading" secondItem="uqr-UC-pjY" secondAttribute="leading" id="utM-7m-Jid"/>
-                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <size key="customSize" width="250" height="280"/>
                                 <connections>
                                     <outlet property="friendPhoto" destination="Yvn-wb-tGg" id="Xph-yU-MKu"/>
                                     <outlet property="friendname" destination="Ojp-XT-9VG" id="o13-qC-JkX"/>
@@ -422,7 +442,7 @@
         <image name="Image" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aSn-27-dRK"/>
+        <segue reference="alR-nH-967"/>
         <segue reference="BVb-0N-Ac9"/>
         <segue reference="1HU-Or-G3B"/>
     </inferredMetricsTieBreakers>

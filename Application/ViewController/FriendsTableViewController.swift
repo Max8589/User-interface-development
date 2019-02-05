@@ -45,10 +45,9 @@ class FriendsTableViewController: UITableViewController {
         // Получаем ячейку из пула
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
         // Получаем имя для конкретной строки
-        let name = names[indexPath.row]
         
         // Устанавливаем имя в надпись ячейки
-        cell.friendName.text = name
+        cell.friendName.text = names[indexPath.row]
         
         return cell
     }
@@ -89,14 +88,18 @@ class FriendsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
+/*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+    
+        
     }
-    */
+*/
+    
 
 }

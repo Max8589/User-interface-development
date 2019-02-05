@@ -13,27 +13,25 @@ class FriendCollectionViewController: UICollectionViewController {
 
     var names = [String]()
     
+    
     @IBAction func viewPhoto(segue: UIStoryboardSegue) {
+        // Проверяем идентификатор, чтобы убедится, что это нужный переход
         if segue.identifier == "viewPhoto" {
             // Получаем ссылку на контроллер, с которого осуществлен переход
             let friendsTableViewController = segue.source as! FriendsTableViewController
             
             // Получаем индекс выделенной ячейки
             if let indexPath = friendsTableViewController.tableView.indexPathForSelectedRow {
-                // Получаем группу по индексу
+                // Получаем имя по индексу
                 let name = friendsTableViewController.names[indexPath.row]
                     // Добавляем группу в список выбранных
                     names.append(name)
                     // Обновляем таблицу
-                
-                }
-                
+                collectionView.reloadData()
             }
             
+        }
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +70,19 @@ class FriendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendCollectionViewCell", for: indexPath) as! FriendCollectionViewCell
+        
+        //  Получаем имя для конкретной строки и устанавливаем имя в надпись ячейки
+  
+     
+     cell.friendPhoto?.image = UIImage(named: "Image")
     
-        cell.friendPhoto?.image = UIImage(named: "Image")
-        cell.backgroundColor = UIColor.lightGray
+//       cell.friendname.text = names[indexPath.row]
+        // Устанавливаем группу в надпись ячейки
+
+  
         // Configure the cell
-    
+       
+        
         return cell
     }
 
