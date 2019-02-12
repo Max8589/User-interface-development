@@ -17,24 +17,19 @@ class MyGroupsTableViewController: UITableViewController {
         // Проверяем идентификатор, чтобы убедится, что это нужный переход
         if segue.identifier == "addGroup" {
             // Получаем ссылку на контроллер, с которого осуществлен переход
-            let groupsTableViewController = segue.source as! GroupsTableViewController
-            
+        let groupsTableViewController = segue.source as! GroupsTableViewController
             // Получаем индекс выделенной ячейки
-            if let indexPath = groupsTableViewController.tableView.indexPathForSelectedRow {
-                // Получаем группу по индексу
-                let group = groupsTableViewController.groups[indexPath.row]
-                // Проверяем, что такой группы нет в списке
-                if  !groups.contains(group) {
-                    // Добавляем группу в список выбранных
-                    groups.append(group)
-                    // Обновляем таблицу
-                    tableView.reloadData()
-                }
-
+        let indexPath = groupsTableViewController.tableView.indexPathForSelectedRow
+            // Получаем группу по индексу
+        let group = groupsTableViewController.groups[indexPath!.row]
+            // Проверяем, что такой группы нет в списке
+        if  !groups.contains(group) {
+            // Добавляем группу в список выбранных
+            groups.append(group)
+            // Обновляем таблицу
+            tableView.reloadData()
             }
-            
         }
-
     }
 
     
