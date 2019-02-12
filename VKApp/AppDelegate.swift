@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Application
+//  VKApp
 //
-//  Created by admin on 20/01/2019.
+//  Created by admin on 10/02/2019.
 //  Copyright © 2019 admin. All rights reserved.
 //
 
