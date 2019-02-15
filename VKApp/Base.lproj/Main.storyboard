@@ -82,6 +82,11 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" id="d3e-nD-Ijb"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-KC-eXQ" customClass="LoaderUIView" customModule="VKApp" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="0.0" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="00R-zh-mfy" firstAttribute="centerX" secondItem="L7a-Sa-rnw" secondAttribute="centerX" id="5LY-aj-wNc"/>
@@ -109,6 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zTD-Nw-v4g"/>
                     <connections>
+                        <outlet property="loader" destination="GGy-KC-eXQ" id="A01-MI-iGK"/>
                         <outlet property="loginButton" destination="4nb-Bi-f74" id="tD7-zT-T5t"/>
                         <outlet property="loginHintLabel" destination="gLx-lh-P1f" id="EZE-pk-nEv"/>
                         <outlet property="loginTextField" destination="IIf-cu-vV1" id="q4l-5T-qQn"/>
@@ -157,20 +163,35 @@
             </objects>
             <point key="canvasLocation" x="1188" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--NewsVK View Controller-->
         <scene sceneID="l9c-vg-OO5">
             <objects>
-                <viewController id="pjp-LC-Qrb" sceneMemberID="viewController">
+                <viewController id="pjp-LC-Qrb" customClass="NewsVKViewController" customModule="VKApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nik-x9-E3B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-vw-WHG" customClass="CustomCollectionView" customModule="VKApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Sk-vw-WHG" firstAttribute="top" secondItem="63E-fM-NLd" secondAttribute="top" id="7pP-Z0-R8h"/>
+                            <constraint firstItem="8Sk-vw-WHG" firstAttribute="leading" secondItem="63E-fM-NLd" secondAttribute="leading" id="ODW-oh-Qmd"/>
+                            <constraint firstItem="63E-fM-NLd" firstAttribute="trailing" secondItem="8Sk-vw-WHG" secondAttribute="trailing" id="Xkd-FV-sVD"/>
+                            <constraint firstItem="63E-fM-NLd" firstAttribute="bottom" secondItem="8Sk-vw-WHG" secondAttribute="bottom" id="oh4-HN-IeA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="63E-fM-NLd"/>
                     </view>
+                    <connections>
+                        <outlet property="CustomCollectionView" destination="8Sk-vw-WHG" id="DWT-6H-emp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7k-7M-cmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="1035"/>
+            <point key="canvasLocation" x="2133.5999999999999" y="1034.9325337331336"/>
         </scene>
         <!--Groups-->
         <scene sceneID="gaB-ta-Rjq">
@@ -260,40 +281,33 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fw4-XV-iNZ">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG3-Q5-ePT">
+                                <rect key="frame" x="343" y="130" width="22" height="22"/>
+                                <connections>
+                                    <action selector="add" destination="aCb-Zd-Q8c" eventType="touchUpInside" id="8Mf-Uu-1p5"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xC2-Np-gBL" customClass="CustomTableView" customModule="VKApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="162" width="375" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="xC2-Np-gBL" customClass="CustomView" customModule="VKApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-84-qfl">
-                                            <rect key="frame" x="0.0" y="42" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y8i-84-qfl" id="oWr-bh-g4U">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                            </tableViewCellContentView>
-                                        </tableViewCell>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fw4-XV-iNZ" firstAttribute="trailing" secondItem="YdF-By-vLu" secondAttribute="trailing" id="15F-SX-pht"/>
+                            <constraint firstItem="YdF-By-vLu" firstAttribute="bottom" secondItem="xC2-Np-gBL" secondAttribute="bottom" id="0gO-uz-AdP"/>
+                            <constraint firstItem="xC2-Np-gBL" firstAttribute="leading" secondItem="YdF-By-vLu" secondAttribute="leading" id="2Z7-TJ-14N"/>
                             <constraint firstItem="4nK-Yb-juQ" firstAttribute="trailing" secondItem="YdF-By-vLu" secondAttribute="trailing" id="4KJ-il-KaD"/>
-                            <constraint firstItem="fw4-XV-iNZ" firstAttribute="bottom" secondItem="YdF-By-vLu" secondAttribute="bottom" id="Mmm-uU-mhb"/>
-                            <constraint firstItem="fw4-XV-iNZ" firstAttribute="leading" secondItem="YdF-By-vLu" secondAttribute="leading" id="Ohe-c6-yv8"/>
+                            <constraint firstItem="cG3-Q5-ePT" firstAttribute="top" secondItem="4nK-Yb-juQ" secondAttribute="bottom" constant="10" id="8Ao-hK-aoJ"/>
+                            <constraint firstItem="YdF-By-vLu" firstAttribute="trailing" secondItem="cG3-Q5-ePT" secondAttribute="trailing" constant="10" id="a7Z-Pf-26M"/>
                             <constraint firstItem="4nK-Yb-juQ" firstAttribute="top" secondItem="YdF-By-vLu" secondAttribute="top" id="kGr-Mp-5te"/>
+                            <constraint firstItem="xC2-Np-gBL" firstAttribute="top" secondItem="cG3-Q5-ePT" secondAttribute="bottom" constant="10" id="kNI-iH-8Wn"/>
                             <constraint firstItem="4nK-Yb-juQ" firstAttribute="leading" secondItem="YdF-By-vLu" secondAttribute="leading" id="oac-4q-pob"/>
-                            <constraint firstItem="fw4-XV-iNZ" firstAttribute="top" secondItem="4nK-Yb-juQ" secondAttribute="bottom" id="qwc-1p-iQg"/>
+                            <constraint firstItem="xC2-Np-gBL" firstAttribute="trailing" secondItem="YdF-By-vLu" secondAttribute="trailing" id="qxc-n7-h6U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YdF-By-vLu"/>
                     </view>
                     <connections>
-                        <outlet property="customView" destination="xC2-Np-gBL" id="w2b-UM-MOq"/>
+                        <outlet property="customTableView" destination="xC2-Np-gBL" id="mqo-HX-2mm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHF-kX-U6g" userLabel="First Responder" sceneMemberID="firstResponder"/>

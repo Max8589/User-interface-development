@@ -10,9 +10,7 @@ import UIKit
 
 class VKApplicationViewModel: BaseViewModel {
     
-    var name: String = ""
     var group: String = ""
-    var photoName: String = ""
     
     init(group: String) {
         self.group = group

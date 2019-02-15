@@ -108,6 +108,7 @@ class LikeButton: UIControl {
         }
         
         let countLabel = UILabel()
+        
         countLabel.textAlignment = .center
         countLabel.font = UIFont.systemFont(ofSize: 25)
         
@@ -132,15 +133,17 @@ class LikeButton: UIControl {
     }
     
     private func updateCountLabel() {
-        let textColor = self.isLiked ? UIColor.gray : UIColor.gray
+        let textColor = self.isLiked ? UIColor.black : UIColor.black
         self.countLabel?.textColor = textColor
-        
-        if self.isLiked {
-            self.counter -= 1
-        } else {
-            self.counter += 1
-        }
-        self.countLabel?.text = "\(self.counter)"
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.allowUserInteraction, .autoreverse], animations: {
+            if self.isLiked {
+                self.counter -= 1
+                self.countLabel?.frame.origin.y -= 1
+            } else {
+                self.counter += 1
+                self.countLabel?.frame.origin.y += 1
+            }
+            self.countLabel?.text = "\(self.counter)"
+        })
     }
-
 }

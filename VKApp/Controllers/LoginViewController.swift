@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var loginButton: UIButton?
     
+    @IBOutlet weak var loader: LoaderUIView?
+    
     private let demoLogin = "123"
     private let demoPass = "456"
     
@@ -40,6 +42,8 @@ class LoginViewController: UIViewController {
     deinit {
         self.removeNotifications()
     }
+    
+    
     
     // MARK: - Notifications
     
@@ -81,6 +85,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loader?.start()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+            self.loader?.stop()
+        })
     }
     
     // MARK: - Actions
