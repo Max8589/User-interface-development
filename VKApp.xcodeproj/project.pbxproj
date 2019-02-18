@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842E2DAC2215AA72007C6ADC /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DAB2215AA72007C6ADC /* TableViewCell2.swift */; };
+		842E2DAE2215AAE9007C6ADC /* ViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DAD2215AAE9007C6ADC /* ViewModel2.swift */; };
+		842E2DB32215B7EA007C6ADC /* VKAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DB12215B7EA007C6ADC /* VKAppCollectionViewCell.swift */; };
+		842E2DB42215B7EA007C6ADC /* VKAppCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842E2DB22215B7EA007C6ADC /* VKAppCollectionViewCell.xib */; };
+		842E2DB62215E53E007C6ADC /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DB52215E53E007C6ADC /* CustomCollectionView.swift */; };
+		842E2DB82215E63D007C6ADC /* NewsVKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DB72215E63D007C6ADC /* NewsVKViewController.swift */; };
+		842E2DBA2215E951007C6ADC /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DB92215E951007C6ADC /* CustomTableView.swift */; };
+		842E2DC32216A66F007C6ADC /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E2DC22216A66F007C6ADC /* LoaderUIView.swift */; };
 		84497E50221027B1009E9334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84497E4F221027B1009E9334 /* AppDelegate.swift */; };
 		84497E55221027B1009E9334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84497E53221027B1009E9334 /* Main.storyboard */; };
 		84497E57221027B3009E9334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84497E56221027B3009E9334 /* Assets.xcassets */; };
@@ -29,6 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842E2DAB2215AA72007C6ADC /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
+		842E2DAD2215AAE9007C6ADC /* ViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel2.swift; sourceTree = "<group>"; };
+		842E2DB12215B7EA007C6ADC /* VKAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAppCollectionViewCell.swift; sourceTree = "<group>"; };
+		842E2DB22215B7EA007C6ADC /* VKAppCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKAppCollectionViewCell.xib; sourceTree = "<group>"; };
+		842E2DB52215E53E007C6ADC /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		842E2DB72215E63D007C6ADC /* NewsVKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVKViewController.swift; sourceTree = "<group>"; };
+		842E2DB92215E951007C6ADC /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		842E2DC22216A66F007C6ADC /* LoaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
 		84497E4C221027B1009E9334 /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84497E4F221027B1009E9334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84497E54221027B1009E9334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842E2DC12216A580007C6ADC /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				842E2DC22216A66F007C6ADC /* LoaderUIView.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		84497E43221027B1009E9334 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +111,7 @@
 				84497E56221027B3009E9334 /* Assets.xcassets */,
 				84497E58221027B3009E9334 /* LaunchScreen.storyboard */,
 				84497E5B221027B3009E9334 /* Info.plist */,
+				842E2DC12216A580007C6ADC /* Loader */,
 				84497E96221163A4009E9334 /* CustomView */,
 				84497E8D22108FE1009E9334 /* Views */,
 				84497E652210496A009E9334 /* Cells */,
@@ -102,6 +127,9 @@
 				84497E89221064A3009E9334 /* FriendsTableViewCell.swift */,
 				84497EA0221181DF009E9334 /* GroupsVKTableViewCell.swift */,
 				84497EA1221181DF009E9334 /* GroupsVKTableViewCell.xib */,
+				842E2DAB2215AA72007C6ADC /* TableViewCell2.swift */,
+				842E2DB12215B7EA007C6ADC /* VKAppCollectionViewCell.swift */,
+				842E2DB22215B7EA007C6ADC /* VKAppCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -116,6 +144,7 @@
 				84497EA62212AF0A009E9334 /* GroupsVKViewController.swift */,
 				84497EA422119944009E9334 /* VKAppHeader.swift */,
 				84497EA82212C42E009E9334 /* BaseViewModel.swift */,
+				842E2DB72215E63D007C6ADC /* NewsVKViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +163,8 @@
 			children = (
 				84497E9922116405009E9334 /* ViewModel */,
 				84497E97221163DC009E9334 /* CustomView.swift */,
+				842E2DB52215E53E007C6ADC /* CustomCollectionView.swift */,
+				842E2DB92215E951007C6ADC /* CustomTableView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -142,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				84497E9A22116450009E9334 /* VKApplicationViewModel.swift */,
+				842E2DAD2215AAE9007C6ADC /* ViewModel2.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,6 +238,7 @@
 			files = (
 				84497E5A221027B3009E9334 /* LaunchScreen.storyboard in Resources */,
 				84497E57221027B3009E9334 /* Assets.xcassets in Resources */,
+				842E2DB42215B7EA007C6ADC /* VKAppCollectionViewCell.xib in Resources */,
 				84497EA3221181DF009E9334 /* GroupsVKTableViewCell.xib in Resources */,
 				84497E55221027B1009E9334 /* Main.storyboard in Resources */,
 			);
@@ -220,18 +253,25 @@
 			files = (
 				84497E8A221064A3009E9334 /* FriendsTableViewCell.swift in Sources */,
 				84497E9B22116450009E9334 /* VKApplicationViewModel.swift in Sources */,
+				842E2DB62215E53E007C6ADC /* CustomCollectionView.swift in Sources */,
 				84497EA2221181DF009E9334 /* GroupsVKTableViewCell.swift in Sources */,
 				84497E8422105365009E9334 /* MyGroupsTableViewController.swift in Sources */,
+				842E2DAC2215AA72007C6ADC /* TableViewCell2.swift in Sources */,
 				84497E952210A1E1009E9334 /* LikeButton.swift in Sources */,
 				84497EA72212AF0A009E9334 /* GroupsVKViewController.swift in Sources */,
 				84497EA522119944009E9334 /* VKAppHeader.swift in Sources */,
 				84497E50221027B1009E9334 /* AppDelegate.swift in Sources */,
 				84497E822210534D009E9334 /* LoginViewController.swift in Sources */,
+				842E2DBA2215E951007C6ADC /* CustomTableView.swift in Sources */,
 				84497E8F22109229009E9334 /* FriendPhoto.swift in Sources */,
 				84497E8622106470009E9334 /* FriendsTableViewController.swift in Sources */,
 				84497EA92212C42E009E9334 /* BaseViewModel.swift in Sources */,
+				842E2DC32216A66F007C6ADC /* LoaderUIView.swift in Sources */,
+				842E2DB32215B7EA007C6ADC /* VKAppCollectionViewCell.swift in Sources */,
 				84497E98221163DC009E9334 /* CustomView.swift in Sources */,
+				842E2DAE2215AAE9007C6ADC /* ViewModel2.swift in Sources */,
 				84497E9322109289009E9334 /* FriendViewController.swift in Sources */,
+				842E2DB82215E63D007C6ADC /* NewsVKViewController.swift in Sources */,
 				84497E6B22104DEC009E9334 /* MyGroupsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

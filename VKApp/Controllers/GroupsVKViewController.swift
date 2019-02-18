@@ -11,7 +11,7 @@ import UIKit
 class GroupsVKViewController: UIViewController {
 
    
-    @IBOutlet weak var customView: CustomView?
+    @IBOutlet weak var customTableView: CustomTableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +33,17 @@ class GroupsVKViewController: UIViewController {
         let VKApp5 = VKApplicationViewModel(group: "Humor")
         VKAppArray.append(VKApp5)
         
-        self.customView?.reload(viewModels: VKAppArray)
+        self.customTableView?.reload(viewModels: VKAppArray)
         
         let headerViewModel = VKAppHeaderViewModel()
         headerViewModel.groupName = "Groups"
-        self.customView?.setHeader(viewModel: headerViewModel)
+        self.customTableView?.setHeader(viewModel: headerViewModel)
         
         
+    }
+    
+    @IBAction func add() {
+        let viewModel = VKApplicationViewModel(group: "")
+        self.customTableView?.add(viewModel: viewModel)
     }
 }

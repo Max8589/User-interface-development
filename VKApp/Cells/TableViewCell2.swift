@@ -1,17 +1,15 @@
 //
-//  GroupsTableViewCell.swift
-//  Application
+//  TableViewCell2.swift
+//  VKApp
 //
-//  Created by admin on 01/02/2019.
+//  Created by admin on 14/02/2019.
 //  Copyright © 2019 admin. All rights reserved.
 //
 
 import UIKit
 
-class GroupsTableViewCell: UITableViewCell {
+class TableViewCell2: UITableViewCell {
 
-    @IBOutlet weak var groupName: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
