@@ -83,7 +83,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-KC-eXQ" customClass="LoaderUIView" customModule="VKApp" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -132,7 +132,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="270" y="0.0"/>
+            <point key="canvasLocation" x="269.60000000000002" y="-0.44977511244377816"/>
         </scene>
         <!--News-->
         <scene sceneID="s3x-h6-7g5">
@@ -392,7 +392,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-lg-x1f" customClass="UserpicView" customModule="VKApp" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-lg-x1f" customClass="UserpicView" customModule="VKApp" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="164" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -406,7 +406,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-8d-UKu" customClass="LikeButton" customModule="VKApp" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-8d-UKu" customClass="LikeButton" customModule="VKApp" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="344" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -417,18 +417,26 @@
                                     <action selector="likeButtonChanged" destination="vX4-FO-ano" eventType="valueChanged" id="SVY-bJ-hCx"/>
                                 </connections>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-NU-H5c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UM8-KB-Mgp" firstAttribute="trailing" secondItem="KSH-NU-H5c" secondAttribute="trailing" id="3py-RE-OC3"/>
                             <constraint firstItem="sUR-lg-x1f" firstAttribute="top" secondItem="UM8-KB-Mgp" secondAttribute="top" constant="100" id="8J2-bs-ERW"/>
+                            <constraint firstItem="UM8-KB-Mgp" firstAttribute="bottom" secondItem="KSH-NU-H5c" secondAttribute="bottom" id="GX9-nV-GUg"/>
                             <constraint firstItem="sUR-lg-x1f" firstAttribute="centerX" secondItem="GST-cK-ZAj" secondAttribute="centerX" id="ORC-RD-zod"/>
                             <constraint firstItem="lOv-8d-UKu" firstAttribute="top" secondItem="sUR-lg-x1f" secondAttribute="bottom" constant="30" id="Rzg-ga-IWm"/>
+                            <constraint firstItem="KSH-NU-H5c" firstAttribute="top" secondItem="UM8-KB-Mgp" secondAttribute="top" id="YP5-zX-1bQ"/>
+                            <constraint firstItem="KSH-NU-H5c" firstAttribute="leading" secondItem="UM8-KB-Mgp" secondAttribute="leading" id="eJW-3b-y0u"/>
                             <constraint firstItem="lOv-8d-UKu" firstAttribute="centerX" secondItem="GST-cK-ZAj" secondAttribute="centerX" id="mg0-Ia-jVN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UM8-KB-Mgp"/>
                     </view>
                     <connections>
                         <outlet property="likeButton" destination="lOv-8d-UKu" id="XWZ-f9-MuG"/>
+                        <outlet property="photo" destination="KSH-NU-H5c" id="orz-CB-wEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVm-OS-sFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,4 +463,7 @@
             <point key="canvasLocation" x="1188" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="240" height="360"/>
+    </resources>
 </document>
