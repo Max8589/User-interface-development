@@ -55,7 +55,12 @@ class LoaderUIView: UIView {
         self.label1 = label1
         self.label2 = label2
         self.label3 = label3
-        
+        self.label1?.font = UIFont.systemFont(ofSize: 90)
+        self.label2?.font = UIFont.systemFont(ofSize: 90)
+        self.label3?.font = UIFont.systemFont(ofSize: 90)
+        self.label1?.textColor = UIColor.white
+        self.label2?.textColor = UIColor.white
+        self.label3?.textColor = UIColor.white
     }
     
     override func layoutSubviews() {
@@ -96,15 +101,14 @@ class LoaderUIView: UIView {
         }
     }
     
+    
+    
     func animateStep1() {
         UIView.animate(withDuration: self.animationaDuration,
                        animations: {
                         self.label1?.frame.origin.x = self.frame.size.width / 2
                         self.label2?.frame.origin.x = self.frame.size.width
                         self.label3?.frame.origin.x = 0
-                        self.label1?.font = UIFont.systemFont(ofSize: 90)
-                        self.label2?.font = UIFont.systemFont(ofSize: 90)
-                        self.label3?.font = UIFont.systemFont(ofSize: 90)
                         self.label1?.alpha = 0.2
                         self.label2?.alpha = 0.6
                         self.label3?.alpha = 0.9
@@ -119,9 +123,6 @@ class LoaderUIView: UIView {
                         self.label1?.frame.origin.x = self.frame.size.width / 2
                         self.label2?.frame.origin.x = self.frame.size.width
                         self.label3?.frame.origin.x = 0
-                        self.label1?.font = UIFont.systemFont(ofSize: 90)
-                        self.label2?.font = UIFont.systemFont(ofSize: 90)
-                        self.label3?.font = UIFont.systemFont(ofSize: 90)
                         self.label1?.alpha = 0.9
                         self.label2?.alpha = 0.2
                         self.label3?.alpha = 0.6
@@ -136,9 +137,6 @@ class LoaderUIView: UIView {
                         self.label1?.frame.origin.x = self.frame.size.width / 2
                         self.label2?.frame.origin.x = self.frame.size.width
                         self.label3?.frame.origin.x = 0
-                        self.label1?.font = UIFont.systemFont(ofSize: 90)
-                        self.label2?.font = UIFont.systemFont(ofSize: 90)
-                        self.label3?.font = UIFont.systemFont(ofSize: 90)
                         self.label1?.alpha = 0.6
                         self.label2?.alpha = 0.9
                         self.label3?.alpha = 0.2

@@ -83,8 +83,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -118,7 +116,8 @@ class LoginViewController: UIViewController {
             print("loginText or passText are invalid")
             self.showErrorAlert()        }
     }
-    
+ 
+      // MARK: - Alert
     func showErrorAlert() {
         let alertController = UIAlertController(title: "Error", message: "Wrong login or pass", preferredStyle: .alert)
         
