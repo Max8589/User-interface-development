@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="XMA-E8-8NX">
             <objects>
-                <navigationController id="aWo-Cm-2jM" sceneMemberID="viewController">
+                <navigationController id="aWo-Cm-2jM" customClass="CustomNavigationController" customModule="VKApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jQq-vT-a97">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,13 +43,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKApplication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5S-kr-ovb">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLx-lh-P1f">
                                                 <rect key="frame" x="0.0" y="82" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIf-cu-vV1">
@@ -61,7 +61,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzS-b4-IV2">
                                                 <rect key="frame" x="0.0" y="212.5" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQF-yf-nn4">
@@ -72,7 +72,9 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-Bi-f74">
                                                 <rect key="frame" x="0.0" y="343" width="335" height="30"/>
-                                                <state key="normal" title="Ok"/>
+                                                <state key="normal" title="Ok">
+                                                    <color key="titleColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="loginButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxX-bg-EGB"/>
                                                 </connections>
@@ -83,9 +85,9 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-KC-eXQ" customClass="LoaderUIView" customModule="VKApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="131"/>
+                                        <rect key="frame" x="0.0" y="475" width="317" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.2910228967666626" green="0.46338927745819092" blue="0.65848273038864136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -98,7 +100,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2910228967666626" green="0.46338927745819092" blue="0.65848273038864136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="L7a-Sa-rnw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pt-Ir-mqn"/>
@@ -150,7 +152,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jpz-Ue-HRK" firstAttribute="centerX" secondItem="CFs-G6-Y36" secondAttribute="centerX" id="Ikr-Vf-Pqw"/>
                             <constraint firstItem="jpz-Ue-HRK" firstAttribute="centerY" secondItem="CFs-G6-Y36" secondAttribute="centerY" id="cMH-Fc-aEc"/>
@@ -173,10 +175,9 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-vw-WHG" customClass="CustomCollectionView" customModule="VKApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8Sk-vw-WHG" firstAttribute="top" secondItem="63E-fM-NLd" secondAttribute="top" id="7pP-Z0-R8h"/>
                             <constraint firstItem="8Sk-vw-WHG" firstAttribute="leading" secondItem="63E-fM-NLd" secondAttribute="leading" id="ODW-oh-Qmd"/>
@@ -209,7 +210,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bH5-Ou-ag0" firstAttribute="centerY" secondItem="ahw-PF-7FD" secondAttribute="centerY" id="Ers-hE-pYQ"/>
                             <constraint firstItem="bH5-Ou-ag0" firstAttribute="centerX" secondItem="ahw-PF-7FD" secondAttribute="centerX" id="Xj5-lY-VkG"/>
@@ -330,7 +331,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oH3-7m-unZ" firstAttribute="centerY" secondItem="7zN-9o-Ouh" secondAttribute="centerY" id="5nO-NJ-l6N"/>
                             <constraint firstItem="oH3-7m-unZ" firstAttribute="centerX" secondItem="7zN-9o-Ouh" secondAttribute="centerX" id="kQq-a2-l2J"/>
@@ -392,7 +393,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-lg-x1f" customClass="UserpicView" customModule="VKApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-lg-x1f" customClass="UserpicView" customModule="VKApp" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="164" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -406,7 +407,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-8d-UKu" customClass="LikeButton" customModule="VKApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-8d-UKu" customClass="LikeButton" customModule="VKApp" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="344" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -417,7 +418,7 @@
                                     <action selector="likeButtonChanged" destination="vX4-FO-ano" eventType="valueChanged" id="SVY-bJ-hCx"/>
                                 </connections>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-NU-H5c">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-NU-H5c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                         </subviews>
@@ -464,6 +465,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="240" height="360"/>
+        <image name="1" width="720" height="1280"/>
     </resources>
 </document>

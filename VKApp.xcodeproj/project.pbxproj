@@ -34,6 +34,10 @@
 		84497EA522119944009E9334 /* VKAppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84497EA422119944009E9334 /* VKAppHeader.swift */; };
 		84497EA72212AF0A009E9334 /* GroupsVKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84497EA62212AF0A009E9334 /* GroupsVKViewController.swift */; };
 		84497EA92212C42E009E9334 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84497EA82212C42E009E9334 /* BaseViewModel.swift */; };
+		84D410B9221D78C10082679F /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D410B8221D78C10082679F /* CustomPushAnimator.swift */; };
+		84D410BD221D85F30082679F /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D410BC221D85F30082679F /* CustomPopAnimator.swift */; };
+		84D410C1221D93E60082679F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D410C0221D93E60082679F /* CustomNavigationController.swift */; };
+		84D410C3221D954F0082679F /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D410C2221D954F0082679F /* CustomInteractiveTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		84497EA422119944009E9334 /* VKAppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAppHeader.swift; sourceTree = "<group>"; };
 		84497EA62212AF0A009E9334 /* GroupsVKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVKViewController.swift; sourceTree = "<group>"; };
 		84497EA82212C42E009E9334 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		84D410B8221D78C10082679F /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
+		84D410BC221D85F30082679F /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
+		84D410C0221D93E60082679F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		84D410C2221D954F0082679F /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,10 @@
 				84497EA422119944009E9334 /* VKAppHeader.swift */,
 				84497EA82212C42E009E9334 /* BaseViewModel.swift */,
 				842E2DB72215E63D007C6ADC /* NewsVKViewController.swift */,
+				84D410B8221D78C10082679F /* CustomPushAnimator.swift */,
+				84D410BC221D85F30082679F /* CustomPopAnimator.swift */,
+				84D410C0221D93E60082679F /* CustomNavigationController.swift */,
+				84D410C2221D954F0082679F /* CustomInteractiveTransition.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,12 +279,16 @@
 				84497E8622106470009E9334 /* FriendsTableViewController.swift in Sources */,
 				84497EA92212C42E009E9334 /* BaseViewModel.swift in Sources */,
 				842E2DC32216A66F007C6ADC /* LoaderUIView.swift in Sources */,
+				84D410C1221D93E60082679F /* CustomNavigationController.swift in Sources */,
 				842E2DB32215B7EA007C6ADC /* VKAppCollectionViewCell.swift in Sources */,
 				84497E98221163DC009E9334 /* CustomView.swift in Sources */,
 				842E2DAE2215AAE9007C6ADC /* ViewModel2.swift in Sources */,
+				84D410C3221D954F0082679F /* CustomInteractiveTransition.swift in Sources */,
 				84497E9322109289009E9334 /* FriendViewController.swift in Sources */,
 				842E2DB82215E63D007C6ADC /* NewsVKViewController.swift in Sources */,
 				84497E6B22104DEC009E9334 /* MyGroupsTableViewCell.swift in Sources */,
+				84D410BD221D85F30082679F /* CustomPopAnimator.swift in Sources */,
+				84D410B9221D78C10082679F /* CustomPushAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
